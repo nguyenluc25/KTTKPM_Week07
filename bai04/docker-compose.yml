@@ -1,0 +1,10 @@
+services:
+  node-app:
+    build: .
+    container_name: node-app-container
+    ports:
+      - "8080:3000"
+    volumes:
+      - .:/app
+      - /app/node_modules
+    restart: always
